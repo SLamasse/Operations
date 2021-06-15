@@ -15,12 +15,17 @@ Ce projet à trois grands aspects :
 Évidemment, il y a une dimension artificielle au projet, puisqu'il est difficile d'évaluer la part du calcul mental (bien que nous espérons au moins pouvoir le mettre en évidence) ainsi que les raccourcis que l'auteur doit connaître ou pratiquer.
 
 
-### Inséré dans un enseignement
+
+
+### C'est un porjet inséré dans un enseignement
 Nous utilisons des textes de Nicolas Chuquet que nous décrivons, commentons, formalisons dans le cadre de travaux dirigés 
 
 
 
-### Pour l'instant 
+### Ce que nous faisons pour l'instant 
+
+* les fractions 
+* racines carrés et cubique 
 
 
 
