@@ -1,6 +1,12 @@
 ## Operations
-Un projet entre histoire des sciences et informatique
-Pourquoi faire de la programmation ?  Et bien pour pouvoir itérer des expérimentations
+Un projet entre histoire des sciences et informatique. 
+
+
+
+Pourquoi faire de la programmation ?
+1. parce que l'écriture des textes rend possible cette approche, ils sont construits aussi pour montrer des algorithmes et parfois proposer de les refaie ; 
+2. parce que le formalisme de l'algorithmique permet de mieux comprendre les textes et certains silences 
+3. mais aussi pour pouvoir recommencer des expérimentations. 
 
 ### Une expérimentation historique. 
 
