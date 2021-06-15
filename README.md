@@ -1,6 +1,6 @@
 ## Operations
 Un projet entre histoire des sciences et informatique
-Pourquoi faire 
+Pourquoi faire de la programmation ?  Et bien pour pouvoir itérer des expérimentations
 
 ### Une expérimentation historique. 
 
