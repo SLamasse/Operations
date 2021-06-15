@@ -1,5 +1,5 @@
 ## Operations
-
+Un projet entre histoire des sciences et informatique
 
 ### Une expérimentation historique. 
 
