@@ -17,8 +17,8 @@ Ce projet à trois grands aspects :
 
 
 
-### C'est un porjet inséré dans un enseignement
-Nous utilisons des textes de Nicolas Chuquet que nous décrivons, commentons, formalisons dans le cadre de travaux dirigés 
+### C'est un projet inséré dans un enseignement
+Nous utilisons des textes de Nicolas Chuquet que nous décrivons, commentons, formalisons dans le cadre de travaux dirigés de l'Université Paris 1 Panthéon-Sorbonne.
 
 
 
@@ -27,6 +27,12 @@ Nous utilisons des textes de Nicolas Chuquet que nous décrivons, commentons, fo
 * les fractions 
 * racines carrés et cubique 
 
+
+
+Contributeur(s) : 
+Stéphane Lamassé  - directement -- les choix lui sont imputables comme les défauts 
+Les étudiants du parcours informatique de l'UFR 09 
+Fabrice Issac avec lequel je travaille sur un autre projet mais dont l'influence est perceptible ici 
 
 
 
