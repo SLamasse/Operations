@@ -74,4 +74,17 @@ def transformfrac(listrout, sep) :
     return numerateur,denominateur
 
 
+def SupprimerValeursIdentiques(lst,lst1):
+    l = lst.copy()
+    l1 = lst1.copy()
+    i = 0
+    while i < len(l1):
+        if l1[i] in l:
+            l.remove(l1[i]) # n'efface que la première occurrence
+            #dans une liste
+        elif not l:
+            l.append(1)
+        i += 1
+    return l
+
 
