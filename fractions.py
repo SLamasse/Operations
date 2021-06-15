@@ -1,3 +1,4 @@
+from outils.generalites import * 
 
 def touslesdiviseurs(nombre):
     # On recherche tous les diviseurs d'un nombre
