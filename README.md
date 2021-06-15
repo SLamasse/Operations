@@ -33,7 +33,7 @@ Nous utilisons des textes de Nicolas Chuquet que nous décrivons, commentons, fo
 #### Contributeur(s) : 
 Stéphane Lamassé  - directement -- les choix lui sont imputables comme les défauts 
 Les étudiants du parcours informatique de l'UFR 09 
-Fabrice Issac[http://ttn.univ-paris13.fr/index.php/fabrice-issac/][Paris 13] avec lequel je travaille sur un autre projet mais dont l'influence est perceptible ici 
+Fabrice Issac [Paris 13](http://ttn.univ-paris13.fr/index.php/fabrice-issac/) avec lequel je travaille sur un autre projet mais dont l'influence est perceptible ici 
 
 
 
