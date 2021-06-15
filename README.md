@@ -29,7 +29,7 @@ Nous utilisons des textes de Nicolas Chuquet que nous décrivons, commentons, fo
 
 
 
-Contributeur(s) : 
+#### Contributeur(s) : 
 Stéphane Lamassé  - directement -- les choix lui sont imputables comme les défauts 
 Les étudiants du parcours informatique de l'UFR 09 
 Fabrice Issac avec lequel je travaille sur un autre projet mais dont l'influence est perceptible ici 
