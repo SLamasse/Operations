@@ -1,3 +1,21 @@
+def soustrairelistemultiples(lstdenom):
+    #
+    # On ne doit garder que les plus petits multiples d'un nombre
+    #
+    lst = sorted(lstdenom.copy()) # On ordonne du plus grand au plus petit
+    i = 0
+    m = []
+    while i < len(lst):
+        j = 1
+        while j < len(lst):
+            if lst[j]%lst[i]==lst[j]:
+ #               print(str(lst[i]) + "--------------" + str(lst))
+                del lst[j]
+            j += 1
+        i += 1
+    return lst
+
+
 
 def touslesdiviseurs(nombre):
     # On recherche tous les diviseurs d'un nombre
