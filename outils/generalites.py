@@ -1,20 +1,27 @@
+
+def T_GrandDenomDiviseurCommun(lst):
+    l = sorted(lst, reverse=True)
+    i = 0
+    r = True
+    while i < len(l):
+        if l[0]%l[i]==0:
+            pass
+        else:
+            r = False
+        i += 1
+    return r
+
 def soustrairelistemultiples(lstdenom):
     #
     # On ne doit garder que les plus petits multiples d'un nombre
     #
-    lst = sorted(lstdenom.copy()) # On ordonne du plus grand au plus petit
-    i = 0
+    lst = sorted(lstdenom.copy()) # On ordonne du plus grand au plus
+    # petit
     m = []
-    while i < len(lst):
-        j = 1
-        while j < len(lst):
-            if lst[j]%lst[i]==lst[j]:
- #               print(str(lst[i]) + "--------------" + str(lst))
-                del lst[j]
-            j += 1
-        i += 1
+    for el in lst :
+        if el%2==0:
+            lst.remove(el)
     return lst
-
 
 
 def touslesdiviseurs(nombre):
@@ -88,7 +95,7 @@ def transformfrac(listrout, sep) :
     for elt in listrout:
         a,b = elt.split(sep)
         numerateur.append(int(a))
-        denominateur.append(int(b))    
+        denominateur.append(int(b))
     return numerateur,denominateur
 
 
