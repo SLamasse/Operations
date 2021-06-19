@@ -14,7 +14,7 @@ Il consiste en la réalisation d'algorithmes utilisés dans les calculs du _Trip
 
 Ce projet à trois grands aspects : 
 1. produire des programmes au plus **proche des algorithmes** de Nicolas Chuquet 
-2. comptabiliser pour chaque opération **le nombre de signes** (chiffre, traits, lettres) graphiques ayant pu être utilisés 
+2. comptabiliser pour chaque opération **le nombre de signes** (chiffres, traits, lettres) graphiques ayant pu être utilisés 
 3. **Évaluer** le coût de la pratique calculatoire de Nicolas Chuquet 
 
 
