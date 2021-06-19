@@ -4,21 +4,22 @@ from outils.generalites import *
 
 
 def abrevie_rout(listrout, sep="/"):
-    ###############
-    #
-    # Il s'agit de faire une simplification de fraction
-    #
-    #####################
+    """
+     Il s'agit de faire une simplification de fraction
+    1. On isole le numérateur et le dénominateur chacun dans une liste
+    """
 
-    # 1. On isole le numérateur et le dénominateur chacun dans une liste
     a, b = transformfrac(listrout, sep)
 
-    # 2. On cherche tous les facteurs premiers du numérateur et dénominateur 
+    """ 2. On cherche tous les facteurs premiers du numérateur et
+    dénominateur 
+    """
     num = decomp_fact_premier(a[0]) # numérateur
     denom = decomp_fact_premier(b[0]) # dénominateur
 
-    # 3. On appel une fonction qui permet d'enlever les facteurs communs aux dénominateurs et numérateurs
-    # puis de les multiplier entre eux
+    """
+    3. On appel une fonction qui permet d'enlever les facteurs communs aux dénominateurs et numérateurs puis de les multiplier entre eux
+    """
     res1 = multiplierlist(SupprimerValeursIdentiques(num,denom))
     res2 = multiplierlist(SupprimerValeursIdentiques(denom,num))
     # 4. on produit une chaine qui permette de l'écrire comme Nicolas Chuquet
@@ -27,31 +28,46 @@ def abrevie_rout(listrout, sep="/"):
 
 
 def reduire_rout(listrout, sep="/"):
-    ############
-    #
-    # Il s'agit de réduire plusieurs fractions entre elles
-    # c'est-à-dire les mettre à un dénominateur commun 
-    # fol 10 r -11v
+    """
+     Il s'agit de réduire plusieurs fractions entre elles
+     c'est-à-dire les mettre à un dénominateur commun 
+     (fol 10 r -11v)
 
-    # 1. On isole dénominateurs et nominateurs de chacune des fractions
+     1. On isole dénominateurs et nominateurs de chacune des
+     fractions
+    """
+    nbfraction = len(listrout) # pour taille matrice de représentation
+    #de l'opération
     numerateur, denominateur = transformfrac(listrout, sep)
 
-    # 2. "multiplier les denominateurs particuliers l'ung par l'aultre
-    #pour trouver denominateurs commun"
-    # On pourrait comprendre "denominateurs particuliers" comme
-    # "unique", si on trouvait plusieurs fois 3 on n'utiliserait 3
-    # qu'une seule fois
-    # mais il n'y a pas d'exemple de ce type.
-    # Pour Chuquet, en revanche, il est inutile de multiplier tous les termes entre
-    # eux. Il faut aupravant savoir si certains des dénominateurs sont
-    # contenus dans d'autres --- > il y a évidemment une économie de
-    #calcul
+    """
+    2. "multiplier les denominateurs particuliers l'ung par l'aultre pour trouver denominateurs commun"
+    On pourrait comprendre "denominateurs particuliers" comme
+    "unique", si on trouvait plusieurs fois 3 on n'utiliserait 3
+    qu'une seule fois mais il n'y a pas d'exemple de ce type. C'est
+    pour cette raison que nous ne l'avons pas introduit dans le /else/
+    mais nous continuons à lire le texte, alors ....
+
+    Pour Chuquet, en revanche, il est inutile de multiplier tous les
+    termes entre  eux. Il faut aupravant savoir si certains des
+    dénominateurs sont contenus dans d'autres --- > il y a évidemment
+    une économie de calcul
+    """
+
     if T_GrandDenomDiviseurCommun(denominateur)==True:
         rs = [max(denominateur)]
     else:
-        # sinon on multiplie tous les dénominateurs entre eux 
-#        rs = soustrairelistemultiples(denominateur)
+        #rs = soustrairelistemultiples(denominateur)
         rs = denominateur
+
+    """ 
+    Rappel : choix graphique est de mettre les nombres/chiffres dans
+    des matrices. On pourra compter la quantité de chiffres écrits ce
+    qui suppose de calculer la taille de la matrice et pour cela de
+    connaitre les plus grands chiffres pour la largeur, la longueur
+    est donnée par les  type de nombre + résultats intermédiaires
+    fraction 2 lignes et ici 2 résultats intermédiaires 
+    """
 
     i = 0
     reduction = []
@@ -59,11 +75,8 @@ def reduire_rout(listrout, sep="/"):
         denom = denominateur[i]
         num = numerateur[i]
         denominateur_commun = multiplierlist(rs)
-       # multiplicateur = denominateur_commun//denom
-       # faudrait mieux faire une division avec des entiers mais bon 
         multiplicateur = denominateur_commun//denom
         d1 = denom*multiplicateur
-#        print(str(denom) + " x " + str(multiplicateur) + " = " + str(d1) )
         n1 = num*multiplicateur
         reduction.append(str(n1) + "/" + str(d1))
         i += 1 
