@@ -1,3 +1,4 @@
+import numpy as np
 from outils.generalites import * 
 
 
@@ -62,24 +63,42 @@ def reduire_rout(listrout, sep="/"):
 
     """ 
     Rappel : choix graphique est de mettre les nombres/chiffres dans
-    des matrices. On pourra compter la quantité de chiffres écrits ce
-    qui suppose de calculer la taille de la matrice et pour cela de
+    des matrices. 
+    Ce qui suppose de calculer la taille de la matrice et pour cela de
     connaitre les plus grands chiffres pour la largeur, la longueur
     est donnée par les  type de nombre + résultats intermédiaires
     fraction 2 lignes et ici 2 résultats intermédiaires 
-    """
 
+    Et il faut compter le nombre de chiffre 
+    """
+    chiffre = 0  # compter le nombre de chiffres écrits 
     i = 0
     reduction = []
+    denominateur_commun = multiplierlist(rs)
+    dessin = []
     while i < len(numerateur):
         denom = denominateur[i]
         num = numerateur[i]
-        denominateur_commun = multiplierlist(rs)
         multiplicateur = denominateur_commun//denom
         d1 = denom*multiplicateur
         n1 = num*multiplicateur
         reduction.append(str(n1) + "/" + str(d1))
-        i += 1 
+        dessin.append([str(n1),str(num),str(denom)])
+
+
+        # On crée une liste chiffre enregistrant tous les chiffres écrits
+        n1tolist = list(str(n1))
+        chiffre += len(n1tolist) + len(list(str(num))) + len(list(str(denom)))
+        i += 1
+
+    """ 
+    On utilise  une matrice pour le dessin
+    """
+    nb = [len(elt[0]) for elt in  dessin]
+    ncol = nbfraction+(nbfraction//2)+(sum(nb)-nbfraction)
+    nblignes = 6 # 4 éléments à représenter mais on met de l'espace
+    x = np.zeros((6,ncol)) # on définit la matrice avec des valeurs à 0
+    # Il faut essayer de mettre toutes les listes à la même dimension
     return reduction
 
 
@@ -103,8 +122,9 @@ def reduc_rout_de_rout(listfrac, sep="/"):
 
 #rout =  ["1/4","3/2","1/2","1/6", "4/7", "1/5","10/11"]
 rout = ["1/2","1/3", "3/4","5/6", "3/8", "7/12", "19/24"]
+#rout = ["1/3","5/7"]
 res = reduire_rout(rout)
-print(res)
+print(res[0])
 
 #for elt in rout:
 #    if len(elt)>1:
