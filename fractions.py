@@ -71,7 +71,7 @@ def reduire_rout(listrout, sep="/"):
 
     Et il faut compter le nombre de chiffre 
     """
-    chiffre = 0  # compter le nombre de chiffres écrits 
+    signes = 0 # compter le nombre de signes écrits 
     i = 0
     reduction = []
     denominateur_commun = multiplierlist(rs)
@@ -83,23 +83,40 @@ def reduire_rout(listrout, sep="/"):
         d1 = denom*multiplicateur
         n1 = num*multiplicateur
         reduction.append(str(n1) + "/" + str(d1))
-        dessin.append([str(n1),str(num),str(denom)])
+        dessin.append([str(n1),0,str(num),str(denom),0])
 
 
-        # On crée une liste chiffre enregistrant tous les chiffres écrits
-        n1tolist = list(str(n1))
-        chiffre += len(n1tolist) + len(list(str(num))) + len(list(str(denom)))
+        # On ajoutes au dénombrement des signes graphiques écrits tous
+        #les chiffres des fractions
+        signes += len(list(str(denom))) + len(list(str(num)))
+        signes += len(list(str(n1)))
         i += 1
+    signes += len(rs)
+    signes += (len(rs)//2)*len(list(str(denominateur_commun)))
+
 
     """ 
     On utilise  une matrice pour le dessin
     """
-    nb = [len(elt[0]) for elt in  dessin]
-    ncol = nbfraction+(nbfraction//2)+(sum(nb)-nbfraction)
-    nblignes = 6 # 4 éléments à représenter mais on met de l'espace
-    x = np.zeros((6,ncol)) # on définit la matrice avec des valeurs à 0
+    ncol = nbfraction + (nbfraction//2)
+    nblignes = len(dessin[0])
+    x = np.zeros((nblignes,ncol)) # on définit la matrice avec des
+    # valeurs à 0
+
     # Il faut essayer de mettre toutes les listes à la même dimension
-    return reduction
+    i = 0
+    while i < len(x):
+        j = 0
+        while j < len(x[i]):
+            if j%2==1:
+                if i==nblignes-1:
+                    x[i][j] = denominateur_commun
+            else:
+                k = j//2
+                x[i][j] = dessin[k][i]
+            j += 1
+        i += 1
+    return reduction, x, signes
 
 
 
@@ -121,11 +138,12 @@ def reduc_rout_de_rout(listfrac, sep="/"):
 
 
 #rout =  ["1/4","3/2","1/2","1/6", "4/7", "1/5","10/11"]
-rout = ["1/2","1/3", "3/4","5/6", "3/8", "7/12", "19/24"]
+rout = ["1/2","1/3",  "3/4","5/6", "3/8", "7/12", "19/24"]
 #rout = ["1/3","5/7"]
 res = reduire_rout(rout)
 print(res[0])
-
+print("Chuquet écrit " + str(res[2]) + " signes pour cette opération")
+print(res[1])
 #for elt in rout:
 #    if len(elt)>1:
 #        abr = abrevie_rout(elt)
