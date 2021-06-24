@@ -29,6 +29,7 @@ def abrevie_rout(listrout, sep="/"):
 
 
 def reduire_rout(listrout, sep="/"):
+    np.set_printoptions(suppress=True)
     """
      Il s'agit de réduire plusieurs fractions entre elles
      c'est-à-dire les mettre à un dénominateur commun 
@@ -98,7 +99,7 @@ def reduire_rout(listrout, sep="/"):
     """ 
     On utilise  une matrice pour le dessin
     """
-    ncol = nbfraction + (nbfraction//2)
+    ncol = (2 * nbfraction)-1
     nblignes = len(dessin[0])
     x = np.zeros((nblignes,ncol)) # on définit la matrice avec des
     # valeurs à 0
@@ -138,8 +139,8 @@ def reduc_rout_de_rout(listfrac, sep="/"):
 
 
 #rout =  ["1/4","3/2","1/2","1/6", "4/7", "1/5","10/11"]
-rout = ["1/2","1/3",  "3/4","5/6", "3/8", "7/12", "19/24"]
-#rout = ["1/3","5/7"]
+#rout = ["1/2","1/3",  "3/4","5/6", "3/8", "7/12", "19/24"]
+rout = ["1/3","5/7"]
 res = reduire_rout(rout)
 print(res[0])
 print("Chuquet écrit " + str(res[2]) + " signes pour cette opération")
