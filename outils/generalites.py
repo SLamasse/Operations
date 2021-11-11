@@ -1,4 +1,3 @@
-
 def T_GrandDenomDiviseurCommun(lst):
     l = sorted(lst, reverse=True)
     i = 0
@@ -43,7 +42,7 @@ def decomp_fact_premier(n):
     else:
         # On commence par la parité 
         while n>=2:
-            q,r = divmod(n,2) # renvoie quotien et reste
+            q,r = divmod(n,2) # renvoie quotien et reste
             if r!=0:
                 break
             else:
@@ -105,11 +104,39 @@ def SupprimerValeursIdentiques(lst,lst1):
     i = 0
     while i < len(l1):
         if l1[i] in l:
-            l.remove(l1[i]) # n'efface que la première occurrence
+            l.remove(l1[i]) # n'efface que la première occurrence
             #dans une liste
         elif not l:
             l.append(1)
         i += 1
     return l
 
+
+def entierverslist(entier):
+    # Transformer un entier en list
+    lstChiffre = [int(a) for a in str(entier)] 
+    return lstChiffre
+
+
+def decouplst(num,n):
+    # Il s'agit de découper une liste de nombre en une sous liste de n
+    # taille.  Dans l'extraction des racines on utilise cette méthode
+    # pour découper les nombres à extraire
+    maliste = entierverslist(num)
+    res = list()
+    res2= list()
+    for x in range(len(maliste), 0, -n):
+        # x est l'indice par lequel on débute la découpe de la liste
+        if x-n < 0:
+            lst = maliste[0:x]
+        else:
+            lst = maliste[x-n:x]
+        res.append(lst)
+    res = list(reversed(res))
+    return res
+
+def pluspetiterac(x,n,exp):
+    for i in range(1,n):
+        if i**(exp)>x:
+            return i-1
 
