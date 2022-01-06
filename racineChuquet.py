@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 
+
+
+"""
+Created on Sept 15 10:40:20 2021
+
+@author: Fabrice Issac, Stephane Lamassé
+Institutions: Pireh-Lamop
+LICENCE GNU
+This script aims to generate cooccurrence matrix
+"""
+
+__version__ = "0.1.0"
+__authors__ = "Stephane Lamassé", "Fabrice Issac"
+
+
 from Frac import *
 import math
 
