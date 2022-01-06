@@ -6,7 +6,7 @@ Created on Sept 15 10:40:20 2021
 @author: Fabrice Issac, Stephane Lamassé
 Institutions: Pireh-Lamop
 LICENCE GNU
-This script aims to generate cooccurrence matrix
+This script aims at computing an imperfect square root according to Chuquet's work
 """
 
 __version__ = "0.1.0"
