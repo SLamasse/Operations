@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-
-
 """
 Created on Sept 15 10:40:20 2021
 
