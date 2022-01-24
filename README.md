@@ -26,7 +26,7 @@ Ce projet à trois grands aspects :
 
 ### C'est un projet inséré dans un enseignement
 Nous utilisons des textes de Nicolas Chuquet que nous décrivons, commentons, formalisons dans le cadre de travaux dirigés de l'Université Paris 1 Panthéon-Sorbonne.
-
+Il existe d'autre exemple de cette approche comme par exemple celui-ci portant sur la multiplication de matrices [[https://matrixmultiplication.xyz/][Ici]]
 
 
 ### Ce que nous faisons pour l'instant 
