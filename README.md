@@ -33,7 +33,7 @@ Il existe d'autre exemple de cette approche comme par exemple celui-ci portant s
 
 * Les fractions 
 * Racines carrées et cubiques
-* L'édition du texte du manuscrit BnF. fr.1346, par Stéphane Lamassé est disponible [[Ici][https://fr.overleaf.com/read/jykgmpbpnxtd]]
+* L'édition du texte du manuscrit BnF. fr.1346, par Stéphane Lamassé est disponible [[Ici](https://fr.overleaf.com/read/jykgmpbpnxtd)]
 
 
 
