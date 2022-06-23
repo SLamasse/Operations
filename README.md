@@ -31,8 +31,9 @@ Il existe d'autre exemple de cette approche comme par exemple celui-ci portant s
 
 ### Ce que nous faisons pour l'instant 
 
-* les fractions 
-* racines carrées et cubiques
+* Les fractions 
+* Racines carrées et cubiques
+* L'édition du texte du manuscrit BnF. fr.1346, par Stéphane Lamassé est disponible [[Ici][https://fr.overleaf.com/read/jykgmpbpnxtd]]
 
 
 
