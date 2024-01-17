@@ -19,7 +19,7 @@ Ce projet à trois grands aspects :
 
 
 
-Évidemment, il y a une dimension artificielle au projet, puisqu'il est difficile d'évaluer la part du calcul mental --bien que nous espérons au moins pouvoir le mettre en évidence-- ainsi que les raccourcis que l'auteur doit connaître ou pratiquer.
+Évidemment, il y a une dimension artificielle au projet, puisqu'il est difficile d'évaluer la part du calcul mental - bien que nous espérons au moins pouvoir le mettre en évidence-- ainsi que les raccourcis que l'auteur doit connaître ou pratiquer.
 
 
 
@@ -40,7 +40,7 @@ Il existe d'autre exemple de cette approche comme par exemple celui-ci portant s
 #### Contributeur(s) : 
 - Stéphane Lamassé  - directement -- les choix lui sont imputables comme les défauts 
 - Les étudiants du parcours informatique de l'UFR 09 
-- Fabrice Issac ([Paris 13](http://ttn.univ-paris13.fr/index.php/fabrice-issac/)) avec lequel je travaille sur un autre projet mais dont l'influence est perceptible ici 
+- Fabrice Issac ([Paris 13](http://ttn.univ-paris13.fr/index.php/fabrice-issac/), [TTN](https://llshs.univ-paris13.fr/unites-recherche-plateformes/ttn/) ) avec lequel je travaille sur un autre projet mais dont l'influence est perceptible ici 
 
 
 
